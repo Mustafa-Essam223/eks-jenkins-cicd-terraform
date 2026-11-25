@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="990" viewBox="0 0 1500 990" xmlns:c2pa="http://c2pa.org/manifest">
+<defs>
+<marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#7a7a7a"/></marker>
+<marker id="p" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#7B42BC"/></marker>
+</defs>
+<rect width="1500" height="990" fill="#ffffff"/>
+<text x="750.0" y="40" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="24" fill="#232F3E" font-weight="bold" text-anchor="middle" font-style="normal">EKS + Jenkins CI/CD Platform on AWS (provisioned with Terraform)</text>
+<rect x="200" y="70" width="1100" height="780" rx="8" fill="#fbfbfc" stroke="#232F3E" stroke-width="2.5"/>
+<rect x="200" y="70" width="150" height="28" rx="8" fill="#232F3E"/>
+<text x="275" y="90" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">AWS Cloud</text>
+<rect x="220" y="112" width="1060" height="720" rx="8" fill="none" stroke="#00A4A6" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="236" y="132" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#00797a" font-weight="bold" text-anchor="start" font-style="normal">Region: us-east-1</text>
+<rect x="240" y="148" width="1020" height="666" rx="8" fill="#faf8ff" stroke="#8C4FFF" stroke-width="2.5"/>
+<text x="256" y="168" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#6b34d6" font-weight="bold" text-anchor="start" font-style="normal">VPC  10.0.0.0/16  (eks-vpc)</text>
+<rect x="320" y="176" width="440" height="624" rx="6" fill="none" stroke="#7a7a7a" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="780" y="176" width="440" height="624" rx="6" fill="none" stroke="#7a7a7a" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="540" y="194" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="13" fill="#555" font-weight="bold" text-anchor="middle" font-style="normal">Availability Zone us-east-1a</text>
+<text x="1000" y="194" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="13" fill="#555" font-weight="bold" text-anchor="middle" font-style="normal">Availability Zone us-east-1b</text>
+<rect x="340" y="222" width="400" height="168" rx="6" fill="#f3f9e8" stroke="#7AA116" stroke-width="2"/>
+<rect x="800" y="222" width="400" height="168" rx="6" fill="#f3f9e8" stroke="#7AA116" stroke-width="2"/>
+<text x="352" y="241" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#4f6b0a" font-weight="bold" text-anchor="start" font-style="normal">Public subnet  10.0.1.0/24</text>
+<text x="812" y="241" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#4f6b0a" font-weight="bold" text-anchor="start" font-style="normal">Public subnet  10.0.2.0/24</text>
+<rect x="340" y="420" width="400" height="366" rx="6" fill="#eef6fc" stroke="#147EBA" stroke-width="2"/>
+<rect x="800" y="420" width="400" height="366" rx="6" fill="#eef6fc" stroke="#147EBA" stroke-width="2"/>
+<text x="352" y="439" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#0d5a85" font-weight="bold" text-anchor="start" font-style="normal">Private subnet  10.0.3.0/24</text>
+<text x="812" y="439" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#0d5a85" font-weight="bold" text-anchor="start" font-style="normal">Private subnet  10.0.4.0/24</text>
+<rect x="228" y="214" width="80" height="46" rx="6" fill="#fff" stroke="#8C4FFF" stroke-width="1.8"/>
+<rect x="228" y="214" width="80" height="26" rx="6" fill="#8C4FFF"/>
+<rect x="228" y="230" width="80" height="10" fill="#8C4FFF"/>
+<text x="268.0" y="232" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">IGW</text>
+<text x="268.0" y="254.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="10" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">Internet GW</text>
+<rect x="360" y="256" width="170" height="118" rx="6" fill="#fff" stroke="#ED7100" stroke-width="1.8"/>
+<rect x="360" y="256" width="170" height="26" rx="6" fill="#ED7100"/>
+<rect x="360" y="272" width="170" height="10" fill="#ED7100"/>
+<text x="445.0" y="274" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">Jump host</text>
+<text x="445.0" y="316.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">EC2 t2.micro</text>
+<text x="445.0" y="332.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">Ubuntu, public IP</text>
+<text x="445.0" y="348.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">SSH access</text>
+<rect x="555" y="256" width="165" height="118" rx="6" fill="#fff" stroke="#8C4FFF" stroke-width="1.8"/>
+<rect x="555" y="256" width="165" height="26" rx="6" fill="#8C4FFF"/>
+<rect x="555" y="272" width="165" height="10" fill="#8C4FFF"/>
+<text x="637.5" y="274" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">NAT Gateway</text>
+<text x="637.5" y="316.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">+ Elastic IP</text>
+<text x="637.5" y="332.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">egress for private</text>
+<text x="637.5" y="348.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">subnets</text>
+<rect x="820" y="256" width="360" height="118" rx="6" fill="#fff" stroke="#8C4FFF" stroke-width="1.8"/>
+<rect x="820" y="256" width="360" height="26" rx="6" fill="#8C4FFF"/>
+<rect x="820" y="272" width="360" height="10" fill="#8C4FFF"/>
+<text x="1000.0" y="274" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">Elastic Load Balancers</text>
+<text x="1000.0" y="324.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">Kubernetes Service type LoadBalancer</text>
+<text x="1000.0" y="340.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">Jenkins  :80   |   Backend app  :80</text>
+<rect x="352" y="460" width="836" height="316" rx="8" fill="#fffaf5" stroke="#ED7100" stroke-width="2.5"/>
+<text x="366" y="481" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#b35400" font-weight="bold" text-anchor="start" font-style="normal">Amazon EKS cluster:  eks-cluster</text>
+<rect x="740" y="492" width="434" height="44" rx="6" fill="#fff" stroke="#ED7100" stroke-width="1.5"/>
+<text x="957" y="510" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="13" fill="#b35400" font-weight="bold" text-anchor="middle" font-style="normal">EKS control plane (AWS managed)</text>
+<text x="957" y="527" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#555" font-weight="normal" text-anchor="middle" font-style="normal">private endpoint access, ENIs in both private subnets</text>
+<rect x="368" y="560" width="356" height="200" rx="6" fill="#fff" stroke="#ED7100" stroke-width="1.8"/>
+<text x="380" y="579" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#b35400" font-weight="bold" text-anchor="start" font-style="normal">Managed node group  worker-nodes</text>
+<text x="380" y="594" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#555" font-weight="normal" text-anchor="start" font-style="normal">t2.medium, min / desired / max = 1, no public IP</text>
+<rect x="384" y="608" width="150" height="134" rx="6" fill="#f1f8f1" stroke="#2E7D32" stroke-width="1.8"/>
+<rect x="384" y="608" width="150" height="26" rx="6" fill="#2E7D32"/>
+<rect x="384" y="624" width="150" height="10" fill="#2E7D32"/>
+<text x="459.0" y="626" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="13" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">Backend app</text>
+<text x="459.0" y="668.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">Deployment</text>
+<text x="459.0" y="684.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">(nginx image from</text>
+<text x="459.0" y="700.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">App-repo) +</text>
+<text x="459.0" y="716.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">LoadBalancer svc</text>
+<rect x="552" y="608" width="160" height="134" rx="6" fill="#fdf3f2" stroke="#D24939" stroke-width="1.8"/>
+<rect x="552" y="608" width="160" height="26" rx="6" fill="#D24939"/>
+<rect x="552" y="624" width="160" height="10" fill="#D24939"/>
+<text x="632.0" y="626" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="13" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">Jenkins pod</text>
+<text x="632.0" y="660.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">namespace: jenkins</text>
+<text x="632.0" y="676.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">custom image</text>
+<text x="632.0" y="692.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">(Docker CLI + kubectl)</text>
+<text x="632.0" y="708.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">PV/PVC + docker.sock</text>
+<text x="632.0" y="724.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">SA + RBAC</text>
+<rect x="820" y="560" width="340" height="200" rx="6" fill="none" stroke="#9aa5ad" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="990" y="650" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#7a7a7a" font-weight="normal" text-anchor="middle" font-style="normal">Node group is also attached to</text>
+<text x="990" y="668" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#7a7a7a" font-weight="normal" text-anchor="middle" font-style="normal">this subnet (capacity capped at 1)</text>
+<rect x="20" y="205" width="150" height="60" rx="6" fill="#fff" stroke="#545B64" stroke-width="1.8"/>
+<rect x="20" y="205" width="150" height="26" rx="6" fill="#545B64"/>
+<rect x="20" y="221" width="150" height="10" fill="#545B64"/>
+<text x="95.0" y="223" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">Users</text>
+<text x="95.0" y="252.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">Browser</text>
+<rect x="20" y="300" width="150" height="60" rx="6" fill="#fff" stroke="#545B64" stroke-width="1.8"/>
+<rect x="20" y="300" width="150" height="26" rx="6" fill="#545B64"/>
+<rect x="20" y="316" width="150" height="10" fill="#545B64"/>
+<text x="95.0" y="318" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">Engineer</text>
+<text x="95.0" y="347.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">SSH / console</text>
+<rect x="20" y="610" width="150" height="120" rx="6" fill="#fff" stroke="#7B42BC" stroke-width="1.8"/>
+<rect x="20" y="610" width="150" height="26" rx="6" fill="#7B42BC"/>
+<rect x="20" y="626" width="150" height="10" fill="#7B42BC"/>
+<text x="95.0" y="628" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">Terraform</text>
+<text x="95.0" y="671.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">modules:</text>
+<text x="95.0" y="687.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">network, IAM,</text>
+<text x="95.0" y="703.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">EKS, ec2</text>
+<rect x="1330" y="585" width="150" height="80" rx="6" fill="#fff" stroke="#2496ED" stroke-width="1.8"/>
+<rect x="1330" y="585" width="150" height="26" rx="6" fill="#2496ED"/>
+<rect x="1330" y="601" width="150" height="10" fill="#2496ED"/>
+<text x="1405.0" y="603" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">Docker Hub</text>
+<text x="1405.0" y="642.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">app image registry</text>
+<rect x="1330" y="690" width="150" height="80" rx="6" fill="#fff" stroke="#24292F" stroke-width="1.8"/>
+<rect x="1330" y="690" width="150" height="26" rx="6" fill="#24292F"/>
+<rect x="1330" y="706" width="150" height="10" fill="#24292F"/>
+<text x="1405.0" y="708" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">GitHub App-repo</text>
+<text x="1405.0" y="739.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">Jenkinsfile + k8s</text>
+<text x="1405.0" y="755.0" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="middle" font-style="normal">manifests + app</text>
+<path d="M170 235 L226 235" fill="none" stroke="#333" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M170 330 L268 330 L268 262" fill="none" stroke="#333" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M308 245 L330 245 L330 300 L358 300" fill="none" stroke="#333" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M268 214 L268 204 L1000 204 L1000 254" fill="none" stroke="#333" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M445 374 L445 458" fill="none" stroke="#333" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M600 560 L600 376" fill="none" stroke="#7a7a7a" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#g)"/>
+<path d="M870 374 L870 545 L690 545 L690 606" fill="none" stroke="#333" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M552 690 L536 690" fill="none" stroke="#333" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M712 640 L1328 625" fill="none" stroke="#333" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M1328 730 L712 710" fill="none" stroke="#333" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M170 670 L198 670" fill="none" stroke="#7B42BC" stroke-width="2.4" stroke-dasharray="7 4" marker-end="url(#p)"/>
+<text x="612" y="420" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#666" font-weight="normal" text-anchor="start" font-style="italic">egress via NAT</text>
+<text x="176" y="660" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="1" fill="#222" font-weight="normal" text-anchor="start" font-style="normal"></text>
+<circle cx="190" cy="652" r="12" fill="#D13212" stroke="#fff" stroke-width="2"/>
+<text x="190" y="657" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="13" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">1</text>
+<circle cx="215" cy="330" r="12" fill="#D13212" stroke="#fff" stroke-width="2"/>
+<text x="215" y="335" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="13" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">2</text>
+<circle cx="445" cy="410" r="12" fill="#D13212" stroke="#fff" stroke-width="2"/>
+<text x="445" y="415" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="13" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">3</text>
+<circle cx="1230" cy="654" r="12" fill="#D13212" stroke="#fff" stroke-width="2"/>
+<text x="1230" y="659" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="13" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">5</text>
+<circle cx="1230" cy="738" r="12" fill="#D13212" stroke="#fff" stroke-width="2"/>
+<text x="1230" y="743" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="13" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">4</text>
+<circle cx="543" cy="672" r="12" fill="#D13212" stroke="#fff" stroke-width="2"/>
+<text x="543" y="677" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="13" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">6</text>
+<circle cx="870" cy="410" r="12" fill="#D13212" stroke="#fff" stroke-width="2"/>
+<text x="870" y="415" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="13" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">7</text>
+<circle cx="870" cy="440" r="0" fill="none"/>
+<rect x="20" y="868" width="1460" height="100" rx="6" fill="#f6f7f8" stroke="#c9ced2" stroke-width="1.2"/>
+<text x="36" y="890" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="14" fill="#232F3E" font-weight="bold" text-anchor="start" font-style="normal">Flow</text>
+<circle cx="44" cy="904" r="9" fill="#D13212"/>
+<text x="44" y="908" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">1</text>
+<text x="60" y="908" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="start" font-style="normal">terraform apply provisions VPC, subnets, NAT, IAM roles, EKS cluster, node group and jump host</text>
+<circle cx="44" cy="922" r="9" fill="#D13212"/>
+<text x="44" y="926" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">2</text>
+<text x="60" y="926" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="start" font-style="normal">Engineer connects to the jump host (SSH / EC2 console connect)</text>
+<circle cx="44" cy="940" r="9" fill="#D13212"/>
+<text x="44" y="944" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">3</text>
+<text x="60" y="944" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="start" font-style="normal">From the jump host: aws eks update-kubeconfig, then kubectl apply k8s_files/ to deploy Jenkins</text>
+<circle cx="44" cy="958" r="9" fill="#D13212"/>
+<text x="44" y="962" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">4</text>
+<text x="60" y="962" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="start" font-style="normal">Jenkins pulls the Jenkinsfile and manifests from App-repo</text>
+<circle cx="780" cy="904" r="9" fill="#D13212"/>
+<text x="780" y="908" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">5</text>
+<text x="796" y="908" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="start" font-style="normal">Pipeline with ENV=release: docker build and push the app image to Docker Hub</text>
+<circle cx="780" cy="922" r="9" fill="#D13212"/>
+<text x="780" y="926" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">6</text>
+<text x="796" y="926" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="start" font-style="normal">Pipeline with ENV=dev/test/prod: kubectl apply deploys the backend app to the cluster</text>
+<circle cx="780" cy="940" r="9" fill="#D13212"/>
+<text x="780" y="944" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="11" fill="#fff" font-weight="bold" text-anchor="middle" font-style="normal">7</text>
+<text x="796" y="944" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-size="12" fill="#333" font-weight="normal" text-anchor="start" font-style="normal">Users reach Jenkins and the app through the AWS Load Balancers (via the Internet Gateway)</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo4N2ZlZjUzYS1kOWQzLTRlODctODIwZC03ODE3Y2NlNzViODgAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaH0nb5w9VR5eadfm9puQpckAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDphNmJlMDg5OC02Y2VjLTQ2YTAtOTE5ZS0zZjkyYWU0MzBmZWFscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoWw2dzax67XDCk+mItEB7LQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggBwQHLDASzuoOOfwZyNIiEQJYFJ736B8SQQOmpid8uGWkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaGa/6a1IMBxb8tY5H42djtQAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIB8UVUCiERRNKfXY2/pAwozkDwQzcvdir++1/bhJJIPFZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GVeSZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjg3ZmVmNTNhLWQ5ZDMtNGU4Ny04MjBkLTc4MTdjY2U3NWI4OC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjEwMWQ0NjFkLWU4ZjYtNGNjNy05YTU1LWUxMWZmZjI5YmNjZnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAHBAcsMBLO6g45/BnI0iIRAlgUnvfoHxJBA6amJ3y4ZaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg0KJPDEmhCO1Fl3u9QbuwSHsGhlON7677/Up4xOR4DlOiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggVDbRAo4gG1BwQR2cnYAW8bpTgVguiYoQt/NfFqyhH7V0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQCD6mkgWErfOWk9drYndGALcJAhLsIc11/Xni4m+63ymaewvfNPbuK1s8dXOOfeXZi9sUnz7AOroPBqzGum2um0=</c2pa:manifest></metadata></svg>
