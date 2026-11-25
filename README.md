@@ -13,6 +13,10 @@ Terraform-provisioned **Amazon EKS** platform on AWS that runs a **Jenkins CI/CD
 
 ![Architecture](docs/eks-jenkins-architecture.png)
 
+### CI/CD flow
+
+![CI/CD flow](docs/project-diagram.jpg)
+
 **Flow:** Terraform builds the network, IAM roles, EKS cluster and a jump host. From the jump host you deploy Jenkins to the cluster with `kubectl`. Jenkins then pulls the `Jenkinsfile` from `App-repo`, builds and pushes the app image, and deploys it back to the same cluster behind a LoadBalancer.
 
 ---
